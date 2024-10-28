@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+* {    
+    margin: 0px;
+    padding: 0px;
+    font-family: "Acme", sans-serif;
+    font-weight: 400;
+    font-style: normal; 
+}
+
+body {
+    background-image: url('images/sfondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    margin-top: 20px;
+}
+
+.centro {
+    text-align: center;
+}
+
+.contenitoreTitolo {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    background-color: orange;
+    border: 3px solid black;
+    height: 90px;
+    width: 299px;
+    margin: 20px auto 0;
+    border-radius: 16px;
+}
+
+.titolo {
+    text-align: center;
+    width: 249px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 3px solid black;
+    background-color: white;
+}
+
+.contenitoreInput {
+    display: grid; 
+    grid-template-columns: 60% 40%; 
+    height: 47px;
+    width: 430px;
+    margin: 20px auto 0;
+    padding: 10px;
+    background-color: orange;
+    border: 3px solid black;
+    border-radius: 16px;
+}
+
+.contenitoreInput .selettorePersonaggi {
+    padding: 10px;
+    text-align: left;
+    width: 150px;
+    height: 100%;
+    border-radius: 8px;
+    border: 3px solid black;
+    margin-left: 20px;
+    pointer-events: all;
+}
+
+.contenitoreInput .no-click {
+    pointer-events: none;
+    appearance: none;
+}
+
+
+.contenitoreInput input {
+    text-align: center;
+    width: 270px;
+    height: 90%;
+    border-radius: 8px;
+    border: 3px solid black;
+}
+
+.contenitoreInput .contenitoreSuggerimento {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contenitoreInput ul {
+    list-style-type: none;
+    border: 2px solid black;
+    border-top-color: white;
+    max-height: 300px;
+    width: 270px;
+    overflow-y: overlay;
+    position: absolute;
+    background-color: white;
+    z-index: 10;
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.contenitoreInput ul::-webkit-scrollbar {
+    width: 8px;
+}
+
+.contenitoreInput ul::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.contenitoreInput ul::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+    border: 2px solid #f1f1f1;
+}
+
+.contenitoreInput ul::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.contenitoreInput li {
+    cursor: pointer;
+    width: 100%;
+    height: 77px;
+    padding: 0;
+    margin: 0;
+}
+
+.contenitoreInput li:hover {
+    background-color: #eee;
+}
+
+.contenitoreInput button {
+    border: none;
+    background-color: white;
+    width: 100%;
+    height: 77px;
+}
+
+.box {
+    width: 100px;
+    max-width: 100px;
+    height: 80px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    text-align: center;
+}
+
+.box img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.contenitoreTabella {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    position: relative;
+}
+
+.box-table {
+    width: fit-content;
+    height: fit-content;
+    padding: 15px;
+    background-color: orange;
+    border: 3px solid black;
+    border-radius: 16px;
+    margin-top: 20px;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 10px;
+    background-color: white;
+    border-radius: 8px;
+    border: 3px solid black;
+    margin: 0px auto 0;
+}
+
+th, td {
+    border-radius: 8px;
+    width: 100px;
+    max-width: 100px;
+    text-align: center;
+    vertical-align: middle;
+    max-height: 120px;
+}   
+
+th {
+    font-size: 20px;
+    border-radius: 0px;
+    border-bottom: 5px solid orange;
+    text-shadow: 2px 2px 5px rgb(255, 255, 255);
+}
+
+td {
+    background-color: white;
+    opacity: 0;
+    border: 1px solid black;
+    padding: 0;
+    margin: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease forwards;
+    animation-delay: var(--delay);
+    overflow: hidden;
+}
+
+.img-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    overflow: hidden;
+}
+
+.img-box img {
+    margin: 0px auto 0;
+    display: block;
+    width: auto;
+    height: 80px;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.frecciaSu, .frecciaGiu {
+    background-image: url('images/arrowDown.png'); 
+    background-size: 80%; 
+    background-color: red;
+    background-repeat: 
+    no-repeat; 
+    background-position: center;
+}
+
+.frecciaSu {
+    background-image: url('images/arrowUp.png'); 
+}
+
+td p {
+    color: white;
+}
